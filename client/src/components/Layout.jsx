@@ -114,7 +114,7 @@ export default function Layout({ team, children }) {
             </div>
             <div>
               <strong>{user?.name}</strong>
-              <small>Team manager</small>
+              <small>Team owner</small>
             </div>
           </div>
         </header>
