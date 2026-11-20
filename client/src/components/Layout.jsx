@@ -17,7 +17,7 @@ export default function Layout({ team, children }) {
       <div className="side-label">WORKSPACE</div>
       <nav>{links.map(({to,label,icon:Icon}) => <NavLink key={to} to={to} end={to === '/'} className={({isActive}) => `nav-link ${isActive?'active':''}`}><Icon size={18}/>{label}</NavLink>)}</nav>
       <div className="sidebar-bottom">
-        <div className="mini-team">{team?.logo ? <img src={`http://localhost:5000${team.logo}`} /> : <div className="team-avatar"><Shield size={18}/></div>}<div><strong>{team?.name || 'Your team'}</strong><small>Team workspace</small></div></div>
+        <div className="mini-team">{team?.logo ? <img src={`https://arena-stats-nm6d.onrender.com${team.logo}`} /> : <div className="team-avatar"><Shield size={18}/></div>}<div><strong>{team?.name || 'Your team'}</strong><small>Team workspace</small></div></div>
         <button className="logout-btn" onClick={() => { logout(); navigate('/login'); }}><LogOut size={17}/> Sign out</button>
       </div>
     </aside>
