@@ -16,7 +16,7 @@ export default function TeamSetup({ existing, onSaved }) {
     logout();
     navigate('/login', { replace: true });
   };
-  useEffect(() => { if (existing) { setForm({ name: existing.name, ownerName: existing.ownerName || '', managerName: existing.managerName || '', players: existing.players?.length ? existing.players : [''] }); if (existing.logo) setPreview(`http://localhost:5000${existing.logo}`); } }, [existing]);
+  useEffect(() => { if (existing) { setForm({ name: existing.name, ownerName: existing.ownerName || '', managerName: existing.managerName || '', players: existing.players?.length ? existing.players : [''] }); if (existing.logo) setPreview(`https://arena-stats-nm6d.onrender.com${existing.logo}`); } }, [existing]);
   const setPlayer = (i, value) => setForm(f => ({ ...f, players: f.players.map((p, index) => index === i ? value : p) }));
   const save = async e => {
     e.preventDefault(); setError(''); setSaving(true);
