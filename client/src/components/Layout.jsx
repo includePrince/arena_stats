@@ -81,7 +81,7 @@ export default function Layout({ team, children }) {
         <div className="sidebar-bottom">
           <div className="mini-team">
             {team?.logo ? (
-              <img src={`http://localhost:5000${team.logo}`} alt="Team logo" />
+              <img src={`https://arena-stats-nm6d.onrender.com${team.logo}`} alt="Team logo" />
             ) : (
               <div className="team-avatar">
                 <Shield size={18} />
