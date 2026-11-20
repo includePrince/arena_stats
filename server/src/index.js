@@ -28,7 +28,11 @@ app.use((err, _req, res, _next) => {
 
 const port = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => app.listen(port, () => console.log(`API listening on ${port}`)))
+  .then(() => {
+    app.listen(port, '0.0.0.0', () => {
+      console.log(`API listening on port ${port}`);
+    });
+  })
   .catch((error) => {
     console.error('MongoDB connection failed:', error.message);
     process.exit(1);
